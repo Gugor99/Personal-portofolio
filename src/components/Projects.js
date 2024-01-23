@@ -18,7 +18,7 @@ export const Projects = () => {
       description: "Javascript logic",
       imgUrl: projImg1,
       githubUrl: "https://github.com/Gugor99/password-generator",
-      sitUrl: "https://password-generator-gaby.netlify.app/",
+      siteUrl: "https://password-generator-gaby.netlify.app/",
     },
     {
       title: "Real-time shopping list",
