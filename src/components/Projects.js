@@ -17,31 +17,43 @@ export const Projects = () => {
       title: "Password Generator",
       description: "Javascript logic",
       imgUrl: projImg1,
+      githubUrl: "https://github.com/Gugor99/password-generator",
+      sitUrl: "https://password-generator-gaby.netlify.app/",
     },
     {
       title: "Real-time shopping list",
       description: "Firebase backend",
       imgUrl: projImg2,
+      githubUrl: "https://github.com/Gugor99/shopping-list-monkey",
+      siteUrl: "https://grochery-list-gaby.netlify.app/",
     },
     {
       title: "Quizzcall",
       description: "React & APIs",
       imgUrl: projImg3,
+      githubUrl: "",
+      siteUrl: "https://quizzle-react-gaby.netlify.app/",
     },
     {
       title: "VansLife",
       description: "React router & Design",
       imgUrl: projImg4,
+      githubUrl: "https://github.com/Gugor99/vansLife",
+      siteUrl: "https://vans-life-react-gaby.netlify.app/",
     },
     {
       title: "Twimba",
       description: "Javascript & Design",
       imgUrl: projImg5,
+      githubUrl: "https://github.com/Gugor99/twimba",
+      siteUrl: "https://twimba-gaby.netlify.app/",
     },
     {
       title: "Tenzies",
       description: "React & Design",
       imgUrl: projImg6,
+      githubUrl: "https://github.com/Gugor99/Tenzios",
+      siteUrl: "https://tenzies-reac-gaby.netlify.app/",
     },
   ];
 

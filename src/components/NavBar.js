@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.png';
-import logo2 from '../assets/img/logo-personal-port.jpeg';
+import logo from '../assets/img/gabedode.new.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon4.svg';
-import navIcon3 from '../assets/img/nav-icon2.svg';
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -38,7 +36,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo2} alt="Logo" />
+            <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -52,8 +50,7 @@ export const NavBar = () => {
             <span className="navbar-text">
               <div className="social-icon">
                 <a target="_blank" href="https://it.linkedin.com/in/gabriele-canova-72aa3625b?trk=people-guest_people_search-card"><img src={navIcon1} alt="Linkedin Image" /></a>
-                <a target="_blank" href="https://github.com/Gugor99"><img src={navIcon2} alt="Github Image" /></a>
-                <a target="_blank" href="https://it-it.facebook.com/gabriele.canova.9"><img src={navIcon3} alt="Facebook Image" /></a>
+                <a target="_blank" href="https://github.com/Gugor99"><img src={navIcon2} alt="Github Image" /></a>                
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
