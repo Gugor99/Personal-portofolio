@@ -59,7 +59,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Gabriele", "React Developer", "UI Designer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I'm a 24 years old web developer and designer from Italy. My specialities include HTML, CSS, React JS and Javascript. I've devoted more than a year to studying, completing over 50 React projects and collaborations. Currently looking for my first position as Web Developer, I'm curious to learn new languages and remain open to any learning opportunities.</p>                  
+                  <p>I'm a 24 years old web developer and designer from Italy. My specialities include HTML, CSS and Javascript, but I have a passion for React and its logic. I've devoted more than a year to studying, completing over 50 projects and collaborations. Currently looking for my first position as Frontend Developer/React Developer, I'm curious to learn new languages and remain open to any learning opportunities.</p>                  
                   <a className="no-underline" href='#connect'>
                     <button onClick={() => console.log('connected')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                   </a>
@@ -76,7 +76,9 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
+      <br/>
+      <br/>
+      <ProgressBar />
     </section>
     )
   }
-      /*<ProgressBar />*/

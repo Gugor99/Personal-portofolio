@@ -7,7 +7,7 @@ import projImg4 from "../assets/img/vansLife.png";
 import projImg5 from "../assets/img/twimba.png";
 import projImg6 from "../assets/img/tenzies.png";
 import gabyCV from "../assets/docs/gabriele-canova-resume.docx";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import colorSharp from "../assets/img/skill-bg.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -96,7 +96,7 @@ export const Projects = () => {
                       <h2>Documents</h2>
                       <Row>   
                         <Col className="text-center">                   
-                          <p>A cv I developed among years of tears, sweat and blood.</p>
+                          <p>Here is my resume that collects my skills, abilities and knowledge.</p>
                           <a
                             href={gabyCV}
                             download="Gabriele-Canova-resume.docx"
@@ -106,7 +106,7 @@ export const Projects = () => {
                           </a>
                         </Col>
                         <Col className="text-center">
-                          <p>The prove to my partecipation to one of the most difficult challenges manking have ever faced.</p>
+                          <p>Here is the certificate of participation issued by my programming course.</p>
                           <a href="https://scrimba.com/certificate/u2mmKBSx/gfrontend" target="_blank">
                             <button className="download-btn">See my certificate</button>
                           </a>
@@ -120,7 +120,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp}></img>
     </section>
   )
 }

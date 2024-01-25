@@ -1,4 +1,3 @@
-import { Row, Col } from "react-bootstrap";
 import AnimatedNumber from "react-animated-numbers";
 import TrackVisibility from "react-on-screen";
 
@@ -28,22 +27,33 @@ export const ProgressBar = () => {
   ];
 
   return (
-    <Row className="achieve-box">
+    <div className="achieve-box">
       {achievementsList.map((achievement, index) => (
         <TrackVisibility key={index} offset={80} partialVisibility>
           {({ isVisible }) => (
-            <Col>
+            <div className="progress-div">
               <p>{achievement.metric}</p>
-              <AnimatedNumber
-                value={isVisible ? achievement.value : 0}
-                speed={1}
-                decimals={0}
-              />
-              {achievement.postfix && <span>{achievement.postfix}</span>}
-            </Col>
+              <div className="prog-num">
+                <h2>
+                <AnimatedNumber
+                  includeComma
+                  animateToNumber={parseInt(achievement.value)}
+                  locale="en-US"
+                  configs={(_, index) => {
+                    return {
+                      mass: 1,
+                      friction: 100,
+                      tensions: 140 * (index + 1),
+                    };
+                  }}
+                  />
+                <span>{achievement.postfix}</span>
+                </h2>
+              </div>
+            </div>
           )}
         </TrackVisibility>
       ))}
-    </Row>
+    </div>
   );
 };
