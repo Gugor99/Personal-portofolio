@@ -1,3 +1,6 @@
+/************ Custom Button Styles ************/
+@import url(https://unpkg.com/open-props);
+
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -258,8 +261,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  text-shadow: 0px 0px 155px black;
-  color: #B8B8B8; /*79e851;*/
+  text-shadow: 0px 0px 15px black;
+  color: #4cc9f0;/*#b8b8b8; 79e851;*/
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -303,6 +306,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+.achieve-box{
+  width: 80%;
+  background-color: rgb(255 255 255 / 10%);
 }
 
 /************ Skills Css ************/
@@ -365,6 +372,61 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
+.project .nav.nav-pills {
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .project .nav.nav-pills {
+    width: 80%;
+  }
+}
+.project .nav.nav-pills .nav-item {
+  width: 50%;
+}
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, rgba(117, 209, 245, 0.852) -5.91%, 7%, rgb(133, 31, 22) 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
 .proj-imgbx {
   cursor: pointer;
   position: relative;
@@ -420,6 +482,59 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .site-icon a img{
   width: 1.5em;
+}
+.download-btn {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-3);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(117, 209, 245, 0.852) -5.91%, 7%, rgb(133, 31, 22) 111.58%);
+  /*background: var(--gray-0);*/
+  border: 0;
+  padding: var(--size-2) var(--size-4);
+  transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+  transition: transform 0.1s;
+  position: relative;
+}
+
+.download-btn:hover {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+}
+
+.download-btn:active {
+  --y: 5%;
+  --scale: 0.9;
+  --border-scale: 0.9, 0.8;
+}
+
+.download-btn:before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--size-3) * -1);
+  border: var(--size-1) solid #b8b8b8;
+  transform: scale(var(--border-scale, 0));
+  transition: transform 0.125s;
+  
+  --angle-one: 105deg;
+  --angle-two: 290deg;
+  --spread-one: 30deg;
+  --spread-two: 40deg;
+  --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+  --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+  --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+  --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+  
+  mask: conic-gradient(
+    transparent 0 var(--start-one),
+    white var(--start-one) var(--end-one),
+    transparent var(--end-one) var(--start-two),
+    white var(--start-two) var(--end-two),
+    transparent var(--end-two)
+  );
+  
+  z-index: -1;
 }
 .background-image-right {
   top: 20%;
@@ -505,10 +620,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 30px 0;
-  background: linear-gradient(45.21deg, rgba(117, 209, 245, 0.852) -5.91%, 7%, rgb(133, 31, 22) 111.58%);/* rgba(92, 165, 194, 0.474) -5.91%, rgb(133, 31, 22) 111.58%);;*/
-  /*background-position: center center;
+  background-image: url('./assets/img/footer.png');
+  /*background: linear-gradient(45.21deg, rgba(117, 209, 245, 0.852) -5.91%, 7%, rgb(133, 31, 22) 111.58%); rgba(92, 165, 194, 0.474) -5.91%, rgb(133, 31, 22) 111.58%);;*/
+  background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;*/
+  background-repeat: no-repeat;
 }
 .footer img {
   width: 35%;

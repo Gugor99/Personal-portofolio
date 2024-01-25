@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/password-site.png";
 import projImg2 from "../assets/img/grochery-list.png";
@@ -6,6 +6,7 @@ import projImg3 from "../assets/img/quizzcall.png";
 import projImg4 from "../assets/img/vansLife.png";
 import projImg5 from "../assets/img/twimba.png";
 import projImg6 from "../assets/img/tenzies.png";
+import gabyCV from "../assets/docs/gabriele-canova-resume.docx";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -65,9 +66,20 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>A selection of my range of work</p>
-                <Row>
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">My projects</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">My Documents</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <Tab.Pane eventKey="first">
+                      <h2>Projects</h2>
+                      <p>A selection of my range of work</p>
+                      <Row>
                         {
                           projects.map((project, index) => {
                             return (
@@ -79,6 +91,30 @@ export const Projects = () => {
                           })
                         }
                       </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <h2>Documents</h2>
+                      <Row>   
+                        <Col className="text-center">                   
+                          <p>A cv I developed among years of tears, sweat and blood.</p>
+                          <a
+                            href={gabyCV}
+                            download="Gabriele-Canova-resume.docx"
+                            target="_blank"
+                            rel="noreferrer">
+                          <button className="download-btn">Download my CV</button>
+                          </a>
+                        </Col>
+                        <Col className="text-center">
+                          <p>The prove to my partecipation to one of the most difficult challenges manking have ever faced.</p>
+                          <a href="https://scrimba.com/certificate/u2mmKBSx/gfrontend" target="_blank">
+                            <button className="download-btn">See my certificate</button>
+                          </a>
+                        </Col>
+                      </Row>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
               </div>}
             </TrackVisibility>
           </Col>

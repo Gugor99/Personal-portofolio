@@ -19,7 +19,7 @@ export const Footer = () => {
               <a target="_blank" href="https://it.linkedin.com/in/gabriele-canova-72aa3625b?trk=people-guest_people_search-card"><img src={navIcon1} alt="Linkedin Image" /></a>
               <a target="_blank" href="https://github.com/Gugor99"><img src={navIcon2} alt="Github Image" /></a>                
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>Copyright 2023. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
