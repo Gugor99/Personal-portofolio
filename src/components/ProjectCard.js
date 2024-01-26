@@ -11,8 +11,8 @@ export const ProjectCard = ({ title, description, imgUrl, githubUrl, siteUrl }) 
           <h4>{title}</h4>
           <span>{description}</span>
           <div className="social-icon site-icon">
-                <a target="_blank" href={siteUrl}><img src={navIcon1} alt="Linkedin Image" /></a>
-                <a target="_blank" href={githubUrl}><img src={navIcon2} alt="Github Image" /></a>                
+                <a target="_blank" rel="noreferrer" href={siteUrl}><img src={navIcon1} alt="Linkedin Logo" /></a>
+                <a target="_blank" rel="noreferrer" href={githubUrl}><img src={navIcon2} alt="Github Logo" /></a>                
               </div>
         </div>
       </div>

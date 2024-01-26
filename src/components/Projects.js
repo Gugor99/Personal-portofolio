@@ -107,7 +107,7 @@ export const Projects = () => {
                         </Col>
                         <Col className="text-center">
                           <p>Here is the certificate of participation issued by my programming course.</p>
-                          <a href="https://scrimba.com/certificate/u2mmKBSx/gfrontend" target="_blank">
+                          <a href="https://scrimba.com/certificate/u2mmKBSx/gfrontend" rel="noreferrer" target="_blank">
                             <button className="download-btn">See my certificate</button>
                           </a>
                         </Col>
@@ -120,7 +120,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp}></img>
+      <img className="background-image-right" alt="Blurred red and grey background" src={colorSharp}></img>
     </section>
   )
 }
