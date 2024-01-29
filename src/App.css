@@ -100,6 +100,11 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
   width: 20%;
 }
+@media (max-width:800px){
+  nav.navbar a.navbar-brand {
+    width: 40%;
+  }
+}
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -334,6 +339,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .prog-num h2{
   display: flex;
   margin: auto;
+}
+@media (max-width:800px){
+  .achieve-box{
+    width: 90%;
+  }
 }
 
 /************ Skills Css ************/
