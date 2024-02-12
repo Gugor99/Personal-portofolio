@@ -10,6 +10,8 @@ import gabyCV from "../assets/docs/gabriele-canova-resume.docx";
 import colorSharp from "../assets/img/skill-bg.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { useTranslation } from "react-i18next";
+import { useTransition } from "react";
 
 export const Projects = () => {
 
@@ -58,6 +60,8 @@ export const Projects = () => {
     },
   ];
 
+  const [t] = useTranslation("global")
+
   return (
     <section className="project" id="projects">
       <Container>
@@ -69,16 +73,16 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">My projects</Nav.Link>
+                      <Nav.Link eventKey="first">{t("projects.tab-project")}</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">My Documents</Nav.Link>
+                      <Nav.Link eventKey="second">{t("projects.tab-docs")}</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <h2>Projects</h2>
-                      <p>A selection of my range of work</p>
+                      <h2>{t("projects.proj-title")}</h2>
+                      <p>{t("projects.proj-intro")}</p>
                       <Row>
                         {
                           projects.map((project, index) => {
@@ -93,22 +97,22 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <h2>Documents</h2>
+                      <h2>{t("projects.doc-title")}</h2>
                       <Row>   
                         <Col className="text-center">                   
-                          <p>Here is my resume that collects my skills, abilities and knowledge.</p>
+                          <p>{t("projects.CV-intro")}</p>
                           <a
                             href={gabyCV}
                             download="Gabriele-Canova-resume.docx"
                             target="_blank"
                             rel="noreferrer">
-                          <button className="download-btn">Download my CV</button>
+                          <button className="download-btn">{t("projects.CV-btn")}</button>
                           </a>
                         </Col>
                         <Col className="text-center">
-                          <p>Here is the certificate of participation issued by my programming course.</p>
+                          <p>{t("projects.certificate-intro")}</p>
                           <a href="https://scrimba.com/certificate/u2mmKBSx/gfrontend" rel="noreferrer" target="_blank">
-                            <button className="download-btn">See my certificate</button>
+                            <button className="download-btn">{t("projects.certificate-btn")}</button>
                           </a>
                         </Col>
                       </Row>
@@ -124,43 +128,3 @@ export const Projects = () => {
     </section>
   )
 }
-
-
-/*
-Here's the Tab Container in case you wanna add some more projects.
-**include Nav, Tab with the imports
-<Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>*/

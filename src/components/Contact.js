@@ -4,9 +4,11 @@ import contactImg from "../assets/img/contact.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from "react-i18next";
 
 
 export const Contact = () => {
+  const [t] = useTranslation("global")
   const form = useRef()
   const formInitialDetails = {
     user_name: '',
@@ -16,7 +18,7 @@ export const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState(t("contact.send"));
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -28,7 +30,7 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
+    setButtonText(t("contact.sending"));
 
     emailjs.sendForm('service_z4e81yt', 'template_g9ch3ys', form.current, '3Il9yZyt-1lZpApYl')
       .then((result) => {
@@ -37,7 +39,7 @@ export const Contact = () => {
         setStatus({ success: false, message: 'Something went wrong, please try again later.'});
       });
       
-    setButtonText("Send");
+    setButtonText(t("contact.send"));
     setFormDetails(formInitialDetails);
   }
   
@@ -57,20 +59,20 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h2>Get In Touch</h2>
+                <h2>{t("contact.title")}</h2>
                 <form ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col xs={12} sm={6} md={6} className="px-1">
-                      <input name='user_name' type="text" value={formDetails.user_name} placeholder="Full Name" onChange={(e) => onFormUpdate('user_name', e.target.value)} required />
+                      <input name='user_name' type="text" value={formDetails.user_name} placeholder={t("contact.name")} onChange={(e) => onFormUpdate('user_name', e.target.value)} required />
                     </Col>                  
                     <Col xs={12} sm={6} md={6} className="px-1">
-                      <input name='user_email' type="email" value={formDetails.user_email} placeholder="Email Address" onChange={(e) => onFormUpdate('user_email', e.target.value)} required/>
+                      <input name='user_email' type="email" value={formDetails.user_email} placeholder={t("contact.mail")} onChange={(e) => onFormUpdate('user_email', e.target.value)} required/>
                     </Col>
                     <Col xs={12} sm={12} md={12} className="px-1">
-                      <input name='subject' type="text" value={formDetails.subject} placeholder="Subject" onChange={(e) => onFormUpdate('subject', e.target.value)} required/>
+                      <input name='subject' type="text" value={formDetails.subject} placeholder={t("contact.subject")} onChange={(e) => onFormUpdate('subject', e.target.value)} required/>
                     </Col>
                     <Col xs={12} sm={12} md={12} className="px-1">
-                      <textarea name="message" rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required></textarea>
+                      <textarea name="message" rows="6" value={formDetails.message} placeholder={t("contact.message")} onChange={(e) => onFormUpdate('message', e.target.value)} required></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {

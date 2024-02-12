@@ -1,26 +1,27 @@
 import AnimatedNumber from "react-animated-numbers";
 import TrackVisibility from "react-on-screen";
+import { useTranslation } from "react-i18next";
 
 export const ProgressBar = () => {
-
+const [t] = useTranslation("global")
 
   const achievementsList = [
     {
-      metric: "Completed exercises",
+      metric: t("progress.exercises"),
       value: 120,
       postfix: "+",
     },
     {
-      metric: "Hours courses",
+      metric: t("progress.hours"),
       value: 95,
       postfix: "+",
     },
     {
-      metric: "Sites",
+      metric: t("progress.sites"),
       value: 20,
     },
     {
-      metric: "Year",
+      metric: t("progress.year"),
       value: 1,
       postfix: "+",
     },

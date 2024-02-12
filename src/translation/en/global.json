@@ -1,0 +1,43 @@
+{
+    "navbar": {
+        "skills": "Skills",
+        "projects": "Projects",
+        "connect": "Let's connect"
+    },
+    "banner": {
+        "welcome-msg": "Welcome to my Portfolio",
+        "hi": "Hi, I'm",
+        "intro": "I'm a 24 years old web developer and designer from Italy. My specialities include HTML, CSS and Javascript, but I have a passion for React and its logic. I've devoted more than a year to studying, completing over 50 projects and collaborations. Currently looking for my first position as Frontend Developer/React Developer, I'm curious to learn new languages and remain open to any learning opportunities."
+    },
+    "progress": {
+        "exercises": "Completed exercises",
+        "hours": "Hours of courses",
+        "sites": "Sites",
+        "year": "Year"
+    },
+    "skills": {
+        "title": "Skills",
+        "intro": "Here are some of the tools and skills acquired in my studies."
+    },
+    "projects": {
+        "proj-title": "Projects",
+        "doc-title": "Documents",
+        "tab-project": "My projects",
+        "tab-docs": "My documents",
+        "proj-intro": "A selection of my range of work",
+        "CV-intro": "Here is my resume that collects my skills, abilities and knowledge.",
+        "CV-btn": "Download my CV",
+        "certificate-intro": "Here is the certificate of participation issued by my programming course.",
+        "certificate-btn": "See my certificate"
+
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "name": "Full Name",
+        "mail": "Email Address",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send",
+        "sending": "Sending..."
+    }
+}

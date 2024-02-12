@@ -192,6 +192,33 @@ span.navbar-text {
 	height: 100%;
 	position: absolute;
 }
+.lang-box{
+  display: flex;
+  margin-left: 24px;
+}
+.navbar-text h3 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  display: block;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.navbar-text h2 {
+  margin: 0 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+  opacity: 0.75;
+}
+.navbar-text h3:hover, .navbar-text h3.active {
+  opacity: 1;
+  text-decoration: underline 2px;
+}
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;

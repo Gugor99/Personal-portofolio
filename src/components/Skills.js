@@ -8,11 +8,11 @@ import vsCode from "../assets/img/vs-codeIcon.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/skill-bg.png"
+import { useTranslation } from "react-i18next";
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -30,14 +30,16 @@ export const Skills = () => {
     }
   };
 
+  const [t] = useTranslation("global")
+
   return (
     <section className="skill" id="skills">
         <div className="container">
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Here are some of the tools and skills acquired in my studies.</p>
+                        <h2>{t("skills.title")}</h2>
+                        <p>{t("skills.intro")}</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={HtmlIcon} alt="HTML Logo" />
