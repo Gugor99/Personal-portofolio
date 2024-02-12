@@ -17,7 +17,7 @@ export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [t, i18n] = useTranslation("global")
 
-  const handleChangeLanguage = (lang: string) => {
+  const handleChangeLanguage = (lang) => {
     setActiveLang(lang)
     i18n.changeLanguage(lang)
   }
