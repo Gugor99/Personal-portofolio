@@ -16,7 +16,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = [ "Gabriele", "React Developer", "Angular Lover", "Web Designer" ];
   const period = 2000;
-  const [t, i18n] = useTranslation("global")
+  const [t] = useTranslation("global") // i18n
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -25,6 +25,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text, delta])
 
   const tick = () => {

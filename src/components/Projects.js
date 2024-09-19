@@ -13,7 +13,7 @@ import colorSharp from "../assets/img/skill-bg.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { useTranslation } from "react-i18next";
-import { useTransition } from "react";
+// import { useTransition } from "react";
 
 export const Projects = () => {
 
