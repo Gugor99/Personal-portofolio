@@ -4,6 +4,8 @@ import meter3 from "../assets/img/css-icon.svg";
 import figma from "../assets/img/figma-icon.svg";
 import Firebase from "../assets/img/firebase-icon.svg";
 import react from "../assets/img/react-icon.svg";
+import angular from "../assets/img/angular-icon.svg";
+import typescript from "../assets/img/typescript-icon.svg";
 import vsCode from "../assets/img/vs-codeIcon.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -42,16 +44,24 @@ export const Skills = () => {
                         <p>{t("skills.intro")}</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={HtmlIcon} alt="HTML Logo" />
-                                <h5>HTML</h5>
+                                <img src={angular} alt="Angular Logo" />
+                                <h5>Angular</h5>
                             </div>
                             <div className="item">
                                 <img src={react} alt="React Logo" />
                                 <h5>React JS</h5>
                             </div>
                             <div className="item">
+                                <img src={typescript} alt="Typescript Logo" />
+                                <h5>Typescript</h5>
+                            </div>
+                            <div className="item">
                                 <img src={meter3} alt="CSS Logo" />
                                 <h5>CSS</h5>
+                            </div>
+                            <div className="item">
+                                <img src={HtmlIcon} alt="HTML Logo" />
+                                <h5>HTML</h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Vanilla javascript Logo" />

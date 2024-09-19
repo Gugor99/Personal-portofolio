@@ -14,7 +14,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Gabriele", "React Developer", "UI Designer", "Web Developer" ];
+  const toRotate = [ "Gabriele", "React Developer", "Angular Lover", "Web Designer" ];
   const period = 2000;
   const [t, i18n] = useTranslation("global")
 
@@ -61,7 +61,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">{t("banner.welcome-msg")}</span>
-                <h1>{t("banner.hi")} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Gabriele", "React Developer", "UI Designer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{t("banner.hi")} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Gabriele", "React Developer", "Angular Developer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>{t("banner.intro")}</p>                  
                   <a className="no-underline" href='#connect'>
                     <button onClick={() => console.log(index)}>{t("navbar.connect")}<ArrowRightCircle size={25} /></button>

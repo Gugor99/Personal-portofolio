@@ -6,6 +6,8 @@ import projImg3 from "../assets/img/quizzcall.png";
 import projImg4 from "../assets/img/vansLife.png";
 import projImg5 from "../assets/img/twimba.png";
 import projImg6 from "../assets/img/tenzies.png";
+import oneComunity from "../assets/img/one_community_logo.jpg";
+import inspiring from "../assets/img/inspiring_software_logo.jpg";
 import gabyCV from "../assets/docs/gabriele-canova-resume.docx";
 import colorSharp from "../assets/img/skill-bg.png"
 import 'animate.css';
@@ -76,7 +78,10 @@ export const Projects = () => {
                       <Nav.Link eventKey="first">{t("projects.tab-project")}</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">{t("projects.tab-docs")}</Nav.Link>
+                      <Nav.Link eventKey="second">{t("projects.tab-experience")}</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">{t("projects.tab-docs")}</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -97,13 +102,35 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
+                      <h2>{t("projects.xp-title")}</h2>
+                      <p>{t("projects.xp-intro")}</p>
+                      <Row>   
+                        <Col>                   
+                        <div className="xp-box">
+                          <img class='experience-img' src={oneComunity} alt="One Community Logo" />
+                          <h2>One Community</h2>
+                          <h4>{t('projects.oneC-dates')}</h4>
+                          <p className="xp-desc">{t("projects.oneC-desc")}</p>
+                        </div>
+                        </Col>
+                        <Col>                   
+                        <div className="xp-box">
+                          <img class='experience-img' src={inspiring} alt="Inspiring Logo" />
+                          <h2>Inspiring</h2>
+                          <h4>{t('projects.inspi-dates')}</h4>
+                          <p className="xp-desc">{t("projects.inspi-desc")}</p>
+                        </div>
+                        </Col>
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
                       <h2>{t("projects.doc-title")}</h2>
                       <Row>   
                         <Col className="text-center">                   
                           <p>{t("projects.CV-intro")}</p>
                           <a
                             href={gabyCV}
-                            download="Gabriele-Canova-resume.docx"
+                            download="gabriele-canova-cv.pdf"
                             target="_blank"
                             rel="noreferrer">
                           <button className="download-btn">{t("projects.CV-btn")}</button>

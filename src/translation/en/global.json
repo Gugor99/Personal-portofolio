@@ -7,7 +7,7 @@
     "banner": {
         "welcome-msg": "Welcome to my Portfolio",
         "hi": "Hi, I'm",
-        "intro": "I'm a 24 years old web developer and designer from Italy. My specialities include HTML, CSS and Javascript, but I have a passion for React and its logic. I've devoted more than a year to studying, completing over 50 projects and collaborations. Currently looking for my first position as Frontend Developer/React Developer, I'm curious to learn new languages and remain open to any learning opportunities."
+        "intro": "I'm a 24 year old programmer and web designer. My specialties include Angular, Typescript, and Javascript, but I have a passion for logical languages. I have been studying and working as a Frontend Developer for more than a year now. I am currently looking for a position as such or even better, as a Backend Developer. I am curious to learn new languages ​​and stay open to any learning opportunities."
     },
     "progress": {
         "exercises": "Completed exercises",
@@ -17,15 +17,22 @@
     },
     "skills": {
         "title": "Skills",
-        "intro": "Here are some of the tools and skills acquired in my studies."
+        "intro": "Here are some of the tools and skills acquired in my studies and/or in my work experiences."
     },
     "projects": {
         "proj-title": "Projects",
         "doc-title": "Documents",
+        "xp-title": "Experiences",
+        "tab-experience": "My experiences",
         "tab-project": "My projects",
         "tab-docs": "My documents",
         "proj-intro": "A selection of my range of work",
         "CV-intro": "Here is my resume that collects my skills, abilities and knowledge.",
+        "xp-intro": "Explore some of the key professional experiences that have shaped my journey.",
+        "oneC-dates": "DECEMBER 2023 - APRIL 2024",
+        "oneC-desc": "During my experience with One Community, I contributed to building their management site using the MERN stack, enhancing both performance and design. With a focus on testing, this volunteer role allowed me to work with real code, managing permissions, tracking time, and gaining valuable insights into the role of a Fullstack Developer.",
+        "inspi-dates": "SEPTEMBER 2023 - SEPTEMBER 2024",
+        "inspi-desc": "Inspiring gave me the opportunity to collaborate with a highly professional team on industry management software. My main project focused on the Internet of Things, handling large datasets and user interactions. I also contributed to key common components like the sidenav and toolbar, making them adaptable by developing dynamic components.",
         "CV-btn": "Download my CV",
         "certificate-intro": "Here is the certificate of participation issued by my programming course.",
         "certificate-btn": "See my certificate"

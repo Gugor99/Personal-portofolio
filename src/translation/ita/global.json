@@ -7,7 +7,7 @@
     "banner": {
         "welcome-msg": "Benvenuti nel mio Portfolio",
         "hi": "Ciao, io sono",
-        "intro": "Sono un programmatore e web designer di 24 anni. Le mie specialità includono HTML, CSS e Javascript, ma ho una passione per React e la sua logica. Ho dedicato più di un anno allo studio, portando a termine oltre 50 progetti e collaborazioni. Attualmente sto cercando la mia prima posizione come Frontend Developer/React Developer. Sono curioso di imparare nuove lingue e rimango aperto a qualsiasi opportunità di apprendimento."
+        "intro": "Sono un programmatore e web designer di 24 anni. Le mie specialità includono Angular, Typescript e Javascript, ma ho una passione i linguaggi di logica. Da oltre un anno studio e lavoro come Frontend Developer. Attualmente sto cercando una posizione come tale o ancora meglio, come Backend Developer. Sono curioso di imparare nuove lingue e rimango aperto a qualsiasi opportunità di apprendimento."
     },
     "progress": {
         "exercises": "Esercizi completati",
@@ -17,15 +17,22 @@
     },
     "skills": {
         "title": "Abilità",
-        "intro": "Ecco alcuni degli strumenti e delle competenze acquisite nei miei studi."
+        "intro": "Ecco alcuni degli strumenti e delle competenze acquisite nei miei studi e/o nelle mie esperienze lavorative."
     },
     "projects": {
         "proj-title": "Progetti",
         "doc-title": "Documenti",
+        "xp-title": "Esperienze",
+        "tab-experience": "Le mie esperienze",
         "tab-project": "I miei progetti",
         "tab-docs": "I miei documenti",
         "proj-intro": "Una selezione della mia gamma di lavori",
         "CV-intro": "Ecco il mio curriculum che raccoglie le mie competenze, abilità e conoscenze.",
+        "xp-intro": "Esplora alcune delle esperienze che hanno caratterizzato il mio viaggio.",
+        "oneC-dates": "DICEMBRE 2023 - APRILE 2024",
+        "oneC-desc": "Durante la mia esperienza con One Community, ho contribuito alla realizzazione del loro sito gestionale utilizzando lo stack MERN, migliorandone sia le prestazioni che il design. Con particolare attenzione ai test, questo ruolo di volontario mi ha permesso di lavorare con codice reale, gestire le autorizzazioni, monitorare i tempi e acquisire preziose informazioni sul ruolo di uno sviluppatore Fullstack.",
+        "inspi-dates": "SETTEMBRE 2023 - SETTEMBRE 2024",
+        "inspi-desc": "Inspiring mi ha dato l'opportunità di collaborare con un team altamente professionale su software gestionali di settore. Il mio progetto principale si concentrava sull'Internet delle cose, sulla gestione di grandi set di dati e sulle interazioni degli utenti. Ho anche contribuito a componenti chiave comuni come il sidenav e la barra degli strumenti, rendendoli adattabili sviluppando componenti dinamici.",
         "CV-btn": "Scarica il mio CV",
         "certificate-intro": "Ecco il certificato di partecipazione rilasciato dal mio corso di programmazione",
         "certificate-btn": "Vedi il mio certificato"
