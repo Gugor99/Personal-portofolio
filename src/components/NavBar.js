@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Dropdown, NavDropdown } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import logo from '../assets/img/gabedode.new.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon4.svg';
@@ -54,7 +56,14 @@ export const NavBar = () => {
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>{t("navbar.skills")}</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>{t("navbar.projects")}</Nav.Link>
+              <Dropdown as={ButtonGroup}>
+              <Nav.Link href="#projects" style={{paddingRight: "15px"}} className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>{t("navbar.projects")}</Nav.Link>
+                <Dropdown.Toggle split class="projects-toggle" id="dropdown-split-basic" />
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#jobs" className={activeLink === 'jobs' ? 'active dropdown-item' : 'dropdown-item'} onClick={() => onUpdateActiveLink('jobs')}>{t("navbar.jobs")}</Dropdown.Item>
+                  <Dropdown.Item href="#docs" className={activeLink === 'docs' ? 'active dropdown-item' : 'dropdown-item'} onClick={() => onUpdateActiveLink('docs')}>{t("navbar.docs")}</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">

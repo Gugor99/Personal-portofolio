@@ -13,6 +13,8 @@ import colorSharp from "../assets/img/skill-bg.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { useTranslation } from "react-i18next";
+import { useState, useEffect, useRef } from "react";
+
 // import { useTransition } from "react";
 
 export const Projects = () => {
@@ -64,15 +66,39 @@ export const Projects = () => {
 
   const [t] = useTranslation("global")
 
+  const [activeTab, setActiveTab] = useState('first');
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#jobs') {
+        setActiveTab('second');
+        projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+      } else if (window.location.hash === '#docs'){
+        setActiveTab('third');
+        projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        setActiveTab('first');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Trigger it once on component load
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
-    <section className="project" id="projects">
+    <section className="project" id="projects" ref={projectsRef}>
       <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <Tab.Container id="projects-tabs" activeKey={activeTab}>
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">{t("projects.tab-project")}</Nav.Link>

@@ -121,6 +121,44 @@ span.navbar-text {
     display: flex;
     align-items: center;
 }
+
+div.dropdown-menu {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0;
+}
+
+div.dropdown-menu[data-bs-popper] {
+  left: -30px;
+  margin-top: .5rem;
+}
+
+a.dropdown-item {
+  color: #fff;
+  opacity: 0.75;
+  border: 1px solid #fff;
+  font-size: 18px;
+}
+
+a.dropdown-item.active {
+  background-color: transparent;
+  opacity: 1;
+}
+
+button.dropdown-toggle-split {
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+  color: #fff;
+  opacity: 0.75;
+}
+button.dropdown-toggle-split:hover,
+button.dropdown-toggle-split:focus,
+button.dropdown-toggle-split.active {
+  border-color: none;
+  border: none;
+  opacity: 1;
+}
 .social-icon {
     display: inline-block;
     margin-left: 14px;

@@ -2,6 +2,8 @@
     "navbar": {
         "skills": "Skills",
         "projects": "Projects",
+        "jobs": "Experiences",
+        "docs": "Documents",
         "connect": "Let's connect"
     },
     "banner": {
