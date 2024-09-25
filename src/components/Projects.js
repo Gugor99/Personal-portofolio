@@ -90,6 +90,7 @@ export const Projects = () => {
     };
   }, []);
 
+
   return (
     <section className="project" id="projects" ref={projectsRef}>
       <Container>
@@ -101,13 +102,13 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" activeKey={activeTab}>
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">{t("projects.tab-project")}</Nav.Link>
+                      <Nav.Link href="#projects" eventKey="first">{t("projects.tab-project")}</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">{t("projects.tab-experience")}</Nav.Link>
+                      <Nav.Link href="#jobs" eventKey="second">{t("projects.tab-experience")}</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">{t("projects.tab-docs")}</Nav.Link>
+                      <Nav.Link href="#docs" eventKey="third">{t("projects.tab-docs")}</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -132,20 +133,20 @@ export const Projects = () => {
                       <p>{t("projects.xp-intro")}</p>
                       <Row>   
                         <Col>                   
-                        <div className="xp-box">
-                          <img class='experience-img' src={oneComunity} alt="One Community Logo" />
-                          <h2>One Community</h2>
-                          <h4>{t('projects.oneC-dates')}</h4>
-                          <p className="xp-desc">{t("projects.oneC-desc")}</p>
-                        </div>
+                          <div className="xp-box">
+                            <img class='experience-img' src={inspiring} alt="Inspiring Logo" />
+                            <h2>Inspiring</h2>
+                            <h4>{t('projects.inspi-dates')}</h4>
+                            <p className="xp-desc">{t("projects.inspi-desc")}</p>
+                          </div>
                         </Col>
                         <Col>                   
-                        <div className="xp-box">
-                          <img class='experience-img' src={inspiring} alt="Inspiring Logo" />
-                          <h2>Inspiring</h2>
-                          <h4>{t('projects.inspi-dates')}</h4>
-                          <p className="xp-desc">{t("projects.inspi-desc")}</p>
-                        </div>
+                          <div className="xp-box">
+                            <img class='experience-img' src={oneComunity} alt="One Community Logo" />
+                            <h2>One Community</h2>
+                            <h4>{t('projects.oneC-dates')}</h4>
+                            <p className="xp-desc">{t("projects.oneC-desc")}</p>
+                          </div>
                         </Col>
                       </Row>
                     </Tab.Pane>

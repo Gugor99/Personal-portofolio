@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact.svg";
 import 'animate.css';
@@ -34,15 +34,15 @@ export const Contact = () => {
 
     emailjs.sendForm('service_z4e81yt', 'template_g9ch3ys', form.current, '3Il9yZyt-1lZpApYl')
       .then((result) => {
-        setStatus({ success: true, message: 'Message sent successfully'});
+        setButtonText(t("contact.send"));
+        setStatus({ success: true, message: t("contact.message-sent")});
       }, (error) => {
-        setStatus({ success: false, message: 'Something went wrong, please try again later.'});
+        setButtonText(t("contact.send"));
+        setStatus({ success: false, message: t("contact.message-error")});
       });
       
-    setButtonText(t("contact.send"));
     setFormDetails(formInitialDetails);
   }
-  
 
   return (
     <section className="contact" id="connect">

@@ -140,11 +140,11 @@ a.dropdown-item {
   font-size: 18px;
 }
 
-a.dropdown-item.active {
-  background-color: transparent;
+a.dropdown-item.active,
+a.dropdown-item:active {
+  background-color: transparent !important;
   opacity: 1;
 }
-
 button.dropdown-toggle-split {
   background-color: transparent !important;
   border: none;
@@ -152,12 +152,14 @@ button.dropdown-toggle-split {
   color: #fff;
   opacity: 0.75;
 }
-button.dropdown-toggle-split:hover,
-button.dropdown-toggle-split:focus,
-button.dropdown-toggle-split.active {
-  border-color: none;
-  border: none;
-  opacity: 1;
+button.btn-primary.dropdown-toggle.show,
+button.btn-primary.dropdown-toggle:focus,
+button.btn-primary.dropdown-toggle:active {
+  opacity: 1 !important;
+  border-color: transparent !important;
+  border: none!important;
+  outline: none !important;
+    box-shadow: none !important;
 }
 .social-icon {
     display: inline-block;
@@ -592,18 +594,37 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 32%;
   margin: auto;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.xp-box h2 {
+  animation: fadeIn 2.5s;
+}
+.xp-box h4 {
+  opacity: 0;
+  animation: fadeIn 2.5s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+  font-style: italic;
+  text-align: center;
+  color:#fafafa;
+}
+.xp-box p {
+  opacity: 0;
+  animation: fadeIn 2.5s;
+  animation-delay: 3.3s;
+  animation-fill-mode: forwards;
+  width: 100% !important;
+}
 .experience-img {
   margin: auto;
   width: 30%;
   border-radius: 2em;
-}
-.xp-box h4 {
-  font-style: italic;
-  opacity: 80%;
-  text-align: center;
-}
-.xp-desc {
-  width: 100% !important;
 }
 .download-btn {
   font-family: var(--font-sans);

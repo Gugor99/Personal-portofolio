@@ -47,6 +47,8 @@
         "subject": "Subject",
         "message": "Message",
         "send": "Send",
-        "sending": "Sending..."
+        "sending": "Sending...",
+        "message-sent": "Message sent successfully",
+        "message-error": "Something went wrong, please try again later."
     }
 }

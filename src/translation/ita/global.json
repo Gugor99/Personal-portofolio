@@ -47,6 +47,8 @@
         "subject": "Oggetto",
         "message": "Messaggio",
         "send": "Invia",
-        "sending": "Inviando..."
+        "sending": "Inviando...",
+        "message-sent": "Messaggio inviato correttamente.",
+        "message-error": "Qualcosa è andato storto, per favore riprova più tardi."
     }
 }
