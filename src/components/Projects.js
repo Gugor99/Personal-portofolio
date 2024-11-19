@@ -8,7 +8,7 @@ import projImg5 from "../assets/img/twimba.png";
 import projImg6 from "../assets/img/tenzies.png";
 import oneComunity from "../assets/img/one_community_logo.jpg";
 import inspiring from "../assets/img/inspiring_software_logo.jpg";
-import gabyCV from "../assets/docs/gabriele-canova-resume.docx";
+import gabyCV from "../assets/docs/gabriele-canova-cv.pdf";
 import colorSharp from "../assets/img/skill-bg.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
