@@ -2,6 +2,9 @@ import HtmlIcon from "../assets/img/html-5.svg";
 import meter2 from "../assets/img/js-icon.svg";
 import meter3 from "../assets/img/css-icon.svg";
 import figma from "../assets/img/figma-icon.svg";
+import sharepoint from "../assets/img/sharepoint-icon.svg";
+import nintex from "../assets/img/nintex-icon.svg";
+import sql from "../assets/img/sql-icon.svg";
 import Firebase from "../assets/img/firebase-icon.svg";
 import react from "../assets/img/react-icon.svg";
 import angular from "../assets/img/angular-icon.svg";
@@ -43,6 +46,18 @@ export const Skills = () => {
                         <h2>{t("skills.title")}</h2>
                         <p>{t("skills.intro")}</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                            <div className="item">
+                                <img src={sharepoint} alt="Sharepoint Logo" />
+                                <h5>Sharepoint</h5>
+                            </div>
+                            <div className="item">
+                                <img src={nintex} alt="Nintex Logo" />
+                                <h5>Nintex</h5>
+                            </div>
+                            <div className="item">
+                                <img src={sql} alt="Sql Logo" />
+                                <h5>SQL Server</h5>
+                            </div>
                             <div className="item">
                                 <img src={angular} alt="Angular Logo" />
                                 <h5>Angular</h5>
