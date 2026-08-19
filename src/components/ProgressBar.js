@@ -22,7 +22,7 @@ const [t] = useTranslation("global")
     },
     {
       metric: t("progress.year"),
-      value: 1,
+      value: 3,
       postfix: "+",
     },
   ];
